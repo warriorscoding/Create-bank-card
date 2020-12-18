@@ -1,0 +1,139 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Poppins', sans-serif; */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    color: #fff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    padding: 40px;
+    width: 750px;
+    height: 400px;
+    background:
+    linear-gradient(74deg, #C948D3 0.48%, #F66076 99.23%);
+    border-radius: 15px;
+    box-shadow: 0px 4px 85px rgba(0, 0, 0, 0.39);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.card::before {
+    clip-path: polygon(0 0, 35% 100%, 0 100%);
+}
+
+.card::after {
+    clip-path: polygon(0 0, 55% 100%, 0 100%);
+}
+
+
+.card__bank-logo {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    top: -50px;
+    display: grid;
+    place-items: center;
+}
+
+.card__bank-logo img {
+    width: 90px;
+    transform: translate(-25px, 20px);
+}
+
+
+.card__watermark {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 136px;
+    font-family: 'Bebas Neue', cursive;
+    color: rgba(255, 255, 255, 0.1);
+
+    transform: translate(-50%, -35%);
+    z-index: -1;
+}
+
+.card__bank-name {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.card__type {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+
+.card-number {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Bebas Neue', cursive;
+    word-spacing: 20px;
+    letter-spacing: 3px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__user-name {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.card__type-logo,
+.card__type-logo::before {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.card__type-logo::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: -30px;
+}
